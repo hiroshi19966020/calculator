@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #1e293b;
+}
+main {
+}
+input,
+select,
+button {
+  font: inherit;
+}
+select {
+  margin: 0px 10px;
+}
+select,
+input {
+  padding: 5px 10px;
+  height: 36px;
+}
+input {
+  width: 120px;
+}
+
+.btn {
+  margin: 10px 10px 5px 0px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}

@@ -1,32 +1,85 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Team Calculator</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 3rem; color: #1e293b; }
-    main { max-width: 420px; }
-    input, select, button { font: inherit; margin: .25rem; padding: .4rem; }
-    input { width: 75px; }
-  </style>
-</head>
-<body>
-  <main>
-    <h1>Team Calculator</h1>
-    <p>Our two-person GitHub teamwork project.</p>
-    <label>First number <input id="numberA" type="number" value="2"></label>
-    <select id="operation" aria-label="Operation">
-      <option value="+">+</option>
-      <option value="-">-</option>
-      <option value="*">×</option>
-      <option value="/">÷</option>
-    </select>
-    <label>Second number <input id="numberB" type="number" value="3"></label>
-    <button id="calculate" type="button">Calculate</button>
-    <button id="reset" type="button">Reset</button>
-    <p id="result" role="status">Result: not calculated yet</p>
-  </main>
-  <script src="./calculator.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Team Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-[#eef3fa]">
+    <main class="flex justify-center items-center min-h-screen">
+      <div
+        class="max-w-[450px] bg-[#ffffff] shadow-[0_10px_15px_rgba(0,0,0,0.10)] px-7 py-8 rounded-[10px]"
+      >
+        <h1 class="text-[#183f7a] text-3xl font-bold">Team Calculator</h1>
+        <p class="text-[#9ea8b5] mb-5">
+          Our two-person GitHub teamwork project.
+        </p>
+
+        <div class="flex my-2.5">
+          <div class="">
+            <label class="block" for="numberA">First number </label>
+            <input
+              class="border border-[#d4dde6] rounded-[5px]"
+              id="numberA"
+              type="number"
+              value="2"
+            />
+          </div>
+          <div class="">
+            <label class="block" for="operation"> Operation </label>
+            <select
+              class="w-20 border border-[#d4dde6] rounded-[5px]"
+              id="operation"
+              aria-label="Operation"
+            >
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="*">×</option>
+              <option value="/">÷</option>
+            </select>
+          </div>
+          <div>
+            <label class="block" for="numberB">Second number </label>
+            <input
+              class="border border-[#d4dde6] rounded-[5px]"
+              id="numberB"
+              type="number"
+              value="3"
+            />
+          </div>
+        </div>
+
+        <div>
+          <button
+            class="btn py-1.5 px-4 text-white rounded-[5px] bg-[#364dd8] mx-2"
+            id="calculate"
+            type="button"
+          >
+            Calculate
+          </button>
+          <button
+            class="py-1.5 px-4 rounded-[5px] bg-[#e8eef8]"
+            id="reset"
+            type="button"
+          >
+            <span class="font-bold">Reset</span>
+          </button>
+        </div>
+        <p
+          class="rounded-[10px] font-bold text-[#2d5588] p-3.5 my-4 bg-[#edf5ff]"
+          id="result"
+          role="status"
+        >
+          Result: not calculated yet
+        </p>
+        <p class="text-[#808e9d] text-[0.8rem]">
+          Supports addition, subtraction, multiplication and division, Try a
+          decimal or division by zero.
+        </p>
+      </div>
+    </main>
+    <script src="./calculator.js"></script>
+  </body>
 </html>
