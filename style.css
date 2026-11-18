@@ -18,7 +18,8 @@ input {
   height: 36px;
 }
 input {
-  width: 120px;
+  width: 100%;
+  max-width: 120px;
 }
 
 .btn {
